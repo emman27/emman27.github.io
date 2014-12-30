@@ -5,7 +5,19 @@ var types = ["bar", "pie", "line", "column", "scatter"]
 function addChart(){
     $(function(){
         for(var i=0; i<=4; i++) {
-            $("#recent-graphs").append($('<li class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><a href="#"><figure><div id="chart' + i+'" class="chart-holder"></div> <figcaption>Graph '+i+'<br>Last viewed: Today</figcaption> </figure> </a> </li>'))
+            $("#recent-graphs").append(
+                $('<li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">'+
+                    '<a href="#">'+
+                        '<figure>'+
+                            '<div id="chart' + i+'" class="chart-holder"></div>'+
+                            '<figcaption>'+
+                                'Graph '+i+'<br>' +
+                                'Last viewed: Today'+
+                            '</figcaption>'+
+                        '</figure>'+
+                    '</a>' +
+                '</li>')
+            )
             $('#chart' + i).highcharts({
                 chart: {
                     type: types[i]
