@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>NUHS Patient Visualization</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/login-css.css">
+</head>
+
+<body>
+    <div class="container">
+        <script type="text/javascript" language="JavaScript" src="http://www.biblegateway.com/votd/votd.write.callback.js"> 
+        </script>
+        <script type="text/javascript" language="JavaScript" src="http://www.biblegateway.com/votd/get?format=json&version=ESV&callback=BG.votdWriteCallback">
+        </script>
+        <!-- alternative for no javascript -->
+        <noscript>
+        <iframe framespacing="0" frameborder="no" src="http://www.biblegateway.com/votd/get?format=html&version=ESV">View Verse of the Day</iframe> 
+        </noscript>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+</body>
