@@ -2,24 +2,55 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>NUHS Patient Visualization</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/login-css.css">
+    <title>Emmanuel's Homepage</title>
+    <link rel="stylesheet" href="css/readable_bootstrap.min.css">
+    <link rel="stylesheet" href="css/homepage.css">
 </head>
 
 <body>
     <div class="container">
-        <script type="text/javascript" language="JavaScript" src="http://www.biblegateway.com/votd/votd.write.callback.js"> 
-        </script>
-        <script type="text/javascript" language="JavaScript" src="http://www.biblegateway.com/votd/get?format=json&version=ESV&callback=BG.votdWriteCallback">
-        </script>
-        <!-- alternative for no javascript -->
-        <noscript>
-        <iframe framespacing="0" frameborder="no" src="http://www.biblegateway.com/votd/get?format=html&version=ESV">View Verse of the Day</iframe> 
-        </noscript>
+        <div class="jumbotron">
+            <h3>
+            <script type="text/javascript" language="JavaScript" src="http://www.biblegateway.com/votd/votd.write.callback.js"> 
+            </script>
+            <script type="text/javascript" language="JavaScript" src="http://www.biblegateway.com/votd/get?format=json&version=ESV&callback=BG.votdWriteCallback">
+            </script>
+            <!-- alternative for no javascript -->
+            <noscript>
+            <iframe framespacing="0" frameborder="no" src="http://www.biblegateway.com/votd/get?format=html&version=ESV">View Verse of the Day</iframe> 
+            </noscript>
+            </h3>
+        </div>
+
+        <div class="row">
+            <div class="col-md-9 col-sm-12">
+                <h3>Ministry Plans</h3>
+                <iframe src="http://cdn.knightlab.com/libs/timeline/latest/embed/index.html?source=0Am-af6IxPEyydDJncXRaWDBQclVmbW1iMzVnUjdVd1E&font=Bevan-PotanoSans&maptype=toner&lang=en&height=650" width='100%' height='650' frameborder='0'></iframe>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <h2>About me</h2>
+                <ul>
+                    <li>Follower of Jesus @ Kay Poh Road Baptist Church</li>
+                    <li>NUS Quantitative Finance '17</li>
+                    <li>Minor in Computer Science</li>
+                    <li>Undergraduate Tutor for CS1010S(2014-Present)</li>
+                    <li>Platoon Sergeant, BMTC 3rd Company (2012-2013)</li>
+                    <li>Ice Cream Scooper, The Daily Scoop (2013-Present)</li>
+                    <li>NUS High School '10</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer align="right" class="text-muted">
+            <hr>
+            Contact me:<br>
+            Emmanuel Goh<br>
+            <a href="mailto: emmanuel.goh.7@gmail.com">emmanuel.goh.7@gmail.com</a>
+        </footer>
     </div>
 
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+    <script src="js/remove_bible_gateway.js"></script>
 </body>
