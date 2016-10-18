@@ -25,9 +25,20 @@ figure figcaption{
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
 }
 
 .profile-desc {
     height: 1.17em;
     border: 1px solid black;
+}
+
+.faded-out {
+    display: none;
+}
+
+.subtext {
+    font-size: 14px;
+    border-left: 4px solid gray;
+    padding-left: 6px;
 }
