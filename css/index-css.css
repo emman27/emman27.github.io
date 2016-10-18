@@ -26,3 +26,8 @@ figure figcaption{
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.profile-desc {
+    height: 1.17em;
+    border: 1px solid black;
+}
