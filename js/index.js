@@ -5,7 +5,7 @@
 
   $('.control').on('scrollSpy:enter', function(){
     var open = getControlledElement(this);
-    open.show('slide');
+    open.show('slide', 'slow');
   });
 
   // Never hide stuff. This gives smooth scrolling
