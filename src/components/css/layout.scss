@@ -1,0 +1,36 @@
+.flexbox-horizontal {
+    flex: 1;
+    display: flex;
+    justify-content: center
+}
+
+.flex-item {
+    flex: 1;
+}
+
+.real-body {
+    padding: 2vh;
+}
+
+.profile-pic {
+    height: 30vw;
+    width: 30vw;
+}
+
+@media only screen and (orientation: landscape) { // Phones and stuff in landscape
+    .profile-pic {
+        height: 30vh;
+        width: 30vh;
+    }
+}
+
+@media only screen and (min-width: 992px) { // Laptop screens and up
+    .profile-pic {
+        height: 25vh;
+        width: 25vh;
+    }
+
+    .real-body {
+        padding: 2vh
+    }
+}
