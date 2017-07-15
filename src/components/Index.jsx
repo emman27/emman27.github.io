@@ -6,8 +6,16 @@ const photo = require("../images/emman.jpg");
 class Index extends React.Component {
     render () {
         return (
-            <div className="flexbox-horizontal real-body">
-                <Avatar image={photo} title="Emmanuel's photo" className="profile-pic" />
+            <div className="real-body">
+                <div className="flexbox-horizontal">
+                    <Avatar image={photo} title="Emmanuel's photo" className="profile-pic" />
+                </div>
+                <div className="text-center">
+                    <h2>Emmanuel Goh</h2>
+                    <p>Software Developer @ Cynopsis Solutions</p>
+                </div>
+                <div className="flexbox-horizontal">
+                </div>
             </div>
         );
     }
