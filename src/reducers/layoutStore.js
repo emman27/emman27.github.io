@@ -1,7 +1,9 @@
-const layoutState = (state={
+const defaultLayout = {
     sidebarActive: false,
     drawerActive: false,
-}, action) => {
+};
+
+const layoutState = (state=defaultLayout, action) => {
     switch(action.type) {
     case "OPEN_DRAWER":
         return Object.assign({}, state, { drawerActive: true });
