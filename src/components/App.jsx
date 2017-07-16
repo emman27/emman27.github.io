@@ -1,12 +1,11 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
+
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import Resume from "../reducers";
-import { toggleDrawer } from "../actions/layout";
 
-import { Layout, Panel, Sidebar } from "react-toolbox";
-import NavDrawer from "../containers/NavDrawer";
+import { Layout, Panel, Sidebar, NavDrawer } from "react-toolbox";
 import AppBar from "react-toolbox/lib/app_bar";
 import NavList from "./NavList";
 import Index from "./Index";
@@ -36,14 +35,17 @@ class App extends React.Component {
         return (
             <Provider store={store}>
                 <Layout>
-                    <NavDrawer>
-                        <NavList onLinkClick={() => store.dispatch(toggleDrawer())} />
+                    <NavDrawer
+                        active={this.state.drawerActive}
+                        onOverlayClick={this.toggleDrawer}
+                    >
+                        <NavList onLinkClick={this.toggleDrawer} />
                     </NavDrawer>
                     <Panel>
                         <AppBar
                             title="Emmanuel's Homepage"
                             leftIcon='menu'
-                            onLeftIconClick={() => store.dispatch(toggleDrawer())}
+                            onLeftIconClick={this.toggleDrawer}
                         />
                         <Switch>
                             <Route exact path='/' component={Index} />

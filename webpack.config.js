@@ -8,6 +8,7 @@ module.exports = {
     devtool: "inline-source-map",
     devServer: {
         historyApiFallback: true,
+        disableHostCheck: true,
         contentBase: [__dirname + "/src", __dirname + "/node_modules"] // eslint-disable-line
     },
     module: {
