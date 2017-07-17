@@ -1,0 +1,8 @@
+{
+    "name": "Emmanuel's Homepage",
+    "short_name": "Emmanuel",
+    "start_url": ".",
+    "display": "standalone",
+    "description": "A resume hosting site",
+    "background_color": "blue"
+}

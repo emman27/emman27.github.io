@@ -13,6 +13,9 @@ class Index extends React.Component {
                 <div className="text-center">
                     <h2>Emmanuel Goh</h2>
                     <p>Software Developer @ Cynopsis Solutions</p>
+                    <h3>
+                        <span className="fa fa-mars" />  24  ✝  <span className="fa fa-music" />  <span className="fa fa-futbol-o" />
+                    </h3>
                 </div>
                 <div className="flexbox-horizontal">
                 </div>

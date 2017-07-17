@@ -1,5 +1,8 @@
 module.exports = {
-    entry: "./index.js",
+    entry: {
+        main: "./index.js",
+        sw: "./service-worker.js",
+    },
     context: __dirname + "/src", // eslint-disable-line
     output: {
         filename: "[name].bundle.js",
