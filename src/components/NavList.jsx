@@ -13,8 +13,12 @@ class NavList extends React.Component {
                 </Link>
                 <ListDivider />
                 <ListSubHeader caption="Profile" />
-                <ListItem caption="Education" />
-                <ListItem caption="Work" />
+                <Link to='/education' onClick={this.props.onLinkClick}>
+                    <ListItem caption="Education" />
+                </Link>
+                <Link to='/work' onClick={this.props.onLinkClick}>
+                    <ListItem caption="Work" />
+                </Link>
                 <ListItem caption="Internships" />
                 <ListItem caption="Voluteering" />
                 <ListDivider />

@@ -10,6 +10,7 @@ import AppBar from "react-toolbox/lib/app_bar";
 import NavList from "./NavList";
 import Index from "./Index";
 import Nric from "./Nric";
+import Listing from "./Listing";
 import "./css/layout.scss";
 
 const store = createStore(Resume);
@@ -49,6 +50,8 @@ class App extends React.Component {
                         />
                         <Switch>
                             <Route exact path='/' component={Index} />
+                            <Route path='/education' render={() => <Listing src="education" iconType="fa fa-graduation-cap" />} />
+                            <Route path='/work' render={() => <Listing src="work" iconType="fa fa-briefcase" />} />
                             <Route path='/nric' component={Nric} />
                         </Switch>
                     </Panel>
