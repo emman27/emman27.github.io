@@ -1,45 +1,52 @@
 .flexbox-horizontal {
-    flex: 1;
-    display: flex;
-    justify-content: center
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .flex-item {
-    flex: 1;
+  flex: 1;
 }
 
 .real-body {
-    padding: 2vh;
+  padding: 2vh;
+  min-height: 100vh;
 }
 
 .profile-pic {
-    height: 30vw;
-    width: 30vw;
-    border: 3px solid gray;
+  height: 30vw;
+  width: 30vw;
+  border: 3px solid gray;
 }
 
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 .nav-list > a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 @media only screen and (orientation: landscape) { // Phones and stuff in landscape
-    .profile-pic {
-        height: 30vh;
-        width: 30vh;
-    }
+  .profile-pic {
+    height: 30vh;
+    width: 30vh;
+  }
 }
 
 @media only screen and (min-width: 992px) { // Laptop screens and up
-    .profile-pic {
-        height: 25vh;
-        width: 25vh;
-    }
+  .profile-pic {
+    height: 25vh;
+    width: 25vh;
+  }
 
-    .real-body {
-        padding: 2vh
-    }
+  .real-body {
+    padding: 5vh 10vw 10vh;
+    margin: 5vh 10vw;
+    width: auto;
+    min-height: 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) { // Full size stuff
 }

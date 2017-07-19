@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./css/layout.scss";
 import * as data from "../data/index";
+import Paper from "react-toolbox/lib/card";
 
 
 
@@ -24,19 +25,23 @@ class Listing extends React.Component {
     }
 
     componentWillMount() {
-        this.setState({ data: data[this.props.src] });
+        this.setState({ data: data[this.props.src], iconType: this.props.iconType });
+    }
+
+    componentWillReceiveProps(props) {
+        this.setState({ data: data[props.src], iconType: props.iconType });
     }
 
     render() {
         return (
-            <div className="real-body">
+            <Paper className="real-body" raised={true}>
                 <h1>
                     <span className={this.props.iconType} /> {this.state.data.title}
                 </h1>
                 {Object.keys(this.state.data.items).map((key) => {
                     return this.renderMainItem(key);
                 })}
-            </div>
+            </Paper>
         );
     }
 }

@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import { createStore } from "redux";
 import Resume from "../reducers";
 
-import { Layout, Panel, Sidebar, NavDrawer } from "react-toolbox";
+import { Layout, Panel, NavDrawer } from "react-toolbox";
 import AppBar from "react-toolbox/lib/app_bar";
 import NavList from "./NavList";
 import Index from "./Index";
@@ -21,7 +21,6 @@ class App extends React.Component {
         this.state = {
             drawerActive: false,
             drawerPinned: false,
-            sidebarPinned: false,
         };
         this.toggleDrawer = this.toggleDrawer.bind(this);
     }
@@ -42,22 +41,21 @@ class App extends React.Component {
                     >
                         <NavList onLinkClick={this.toggleDrawer} />
                     </NavDrawer>
+                    <AppBar
+                        title="Emmanuel's Homepage"
+                        leftIcon='menu'
+                        onLeftIconClick={this.toggleDrawer}
+                        fixed
+                    />
                     <Panel>
-                        <AppBar
-                            title="Emmanuel's Homepage"
-                            leftIcon='menu'
-                            onLeftIconClick={this.toggleDrawer}
-                        />
                         <Switch>
                             <Route exact path='/' component={Index} />
                             <Route path='/education' render={() => <Listing src="education" iconType="fa fa-graduation-cap" />} />
                             <Route path='/work' render={() => <Listing src="work" iconType="fa fa-briefcase" />} />
                             <Route path='/nric' component={Nric} />
+                            <Route path= '/internships' render={() => <Listing src="internships" iconType="fa fa-code" />} />
                         </Switch>
                     </Panel>
-                    <Sidebar
-                        pinned={ this.state.sidebarPinned }
-                    />
                 </Layout>
             </Provider>
         );
