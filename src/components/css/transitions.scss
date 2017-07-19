@@ -1,0 +1,30 @@
+.slide-enter {
+  position: absolute;
+  right: 0;
+  -webkit-animation: slide 0.5s backwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 0.5s backwards;
+  animation-delay: 2s;
+}
+
+@-moz-keyframes slide {
+  0% { left: 25px; }
+  100% { left: 5px; }
+}
+
+@-webkit-keyframes slide {
+  0% { left: 25px; }
+  100% { left: 5px; }
+}
+
+@keyframes slide {
+  0% { left: 25px; }
+  100% { left: 5px; }
+}
+
+.slide-in {
+  position: relative;
+  animation: slide 2s backwards;
+  -webkit-animation: slide 2s backwards;
+  -moz-animation: slide 2s backwards;
+}

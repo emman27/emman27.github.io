@@ -22,7 +22,9 @@ class NavList extends React.Component {
                 <Link to='/internships' onClick={this.props.onLinkClick}>
                     <ListItem caption="Internships" />
                 </Link>
-                <ListItem caption="Voluteering" />
+                <Link to='/volunteering' onClick={this.props.onLinkClick}>
+                    <ListItem caption="Voluteering" />
+                </Link>
                 <ListDivider />
                 <ListSubHeader caption="Projects" />
                 <Link to={"/nric"} onClick={this.props.onLinkClick}>

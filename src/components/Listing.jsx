@@ -3,19 +3,18 @@ import PropTypes from "prop-types";
 import "./css/layout.scss";
 import * as data from "../data/index";
 import Paper from "react-toolbox/lib/card";
-
-
+import "./css/transitions.scss";
 
 class Listing extends React.Component {
     renderSubItem(item) {
-        return (<div key={item}>{item}</div>);
+        return (<div className="slide-in" key={item}>{item}</div>);
     }
 
     renderMainItem(key) {
         return (
-            <div style={{ padding: 4 }}>
+            <div>
                 <h2>{key}</h2>
-                <div style={{ borderLeft: "5px solid grey", paddingLeft: 5 }}>
+                <div className="sublist">
                     {this.state.data.items[key].map((item) => {
                         return this.renderSubItem(item);
                     })}

@@ -1,12 +1,15 @@
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
+const path = require("path");
+
 module.exports = {
     entry: {
-        main: "./index.js",
-        sw: "./service-worker.js",
+        main: "./src/index.js",
+        sw: "./src/service-worker.js",
     },
-    context: __dirname + "/src", // eslint-disable-line
     output: {
         filename: "[name].bundle.js",
-        path: __dirname + "dist" // eslint-disable-line
+        path: path.resolve(__dirname, "dist") // eslint-disable-line
     },
     devtool: "inline-source-map",
     devServer: {
@@ -61,7 +64,10 @@ module.exports = {
     resolve: {
         extensions: [".js", ".jsx"],
     },
-    plugins: [],
+    plugins: [
+        new webpack.optimize.UglifyJsPlugin(),
+        new HtmlWebpackPlugin({ template: "src/index.html" }),
+    ],
     externals: {
         "react": "React",
         "react-dom": "ReactDOM",
