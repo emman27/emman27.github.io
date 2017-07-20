@@ -2,6 +2,7 @@
   flex: 1;
   display: flex;
   justify-content: center;
+  flex-direction: row !important;
 }
 
 .flex-item {
@@ -13,7 +14,7 @@
   min-height: 100vh;
 }
 
-.profile-pic {
+div.profile-pic {
   height: 30vw;
   width: 30vw;
   border: 3px solid gray;
@@ -32,24 +33,49 @@
   padding-left: 5px;
 }
 
+div.success-box {
+  text-align: center;
+  padding: 10px;
+  width: 80%;
+  vertical-align: middle;
+}
+
+div.no-flex {
+  flex: 0 !important;
+}
+
 @media only screen and (orientation: landscape) { // Phones and stuff in landscape
-  .profile-pic {
+  div.profile-pic {
     height: 30vh;
     width: 30vh;
+  }
+
+  div.success-box {
+    text-align: center;
+    padding: 10px;
+    width: 80%;
+    vertical-align: middle;
   }
 }
 
 @media only screen and (min-width: 992px) { // Laptop screens and up
-  .profile-pic {
+  div.profile-pic {
     height: 25vh;
     width: 25vh;
   }
 
-  .real-body {
+  div.real-body {
     padding: 5vh 10vw 10vh;
     margin: 5vh 10vw;
     width: auto;
     min-height: 0;
+  }
+
+  div.success-box {
+    text-align: center;
+    padding: 10px;
+    width: 80%;
+    vertical-align: middle;
   }
 }
 

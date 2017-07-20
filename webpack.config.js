@@ -1,4 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const webpack = require("webpack");
 const path = require("path");
 
@@ -39,13 +41,10 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: [{
-                    loader: "style-loader", // creates style nodes from JS strings
-                }, {
-                    loader: "css-loader", // translates CSS into CommonJS
-                }, {
-                    loader: "sass-loader", // compiles Sass to CSS
-                }],
+                use: ExtractTextPlugin.extract({
+                    fallback:  "style-loader", // creates style nodes from JS strings
+                    use: ["css-loader", "sass-loader"], // translates CSS into CommonJS
+                }),
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
@@ -65,11 +64,20 @@ module.exports = {
         extensions: [".js", ".jsx"],
     },
     plugins: [
+        new CleanWebpackPlugin(["dist"]),
         new webpack.optimize.UglifyJsPlugin(),
         new HtmlWebpackPlugin({ template: "src/index.html" }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: "common", // Specify the common bundle's name.
+        }),
+        new ExtractTextPlugin("styles.css"),
     ],
     externals: {
         "react": "React",
         "react-dom": "ReactDOM",
+        fs: "{}",
+        tls: "{}",
+        net: "{}",
+        console: "{}",
     },
 };
