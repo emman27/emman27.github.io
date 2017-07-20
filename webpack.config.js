@@ -10,7 +10,7 @@ module.exports = {
         sw: "./src/service-worker.js",
     },
     output: {
-        filename: "[name].bundle.js",
+        filename: "[name].bundle.[chunkhash].min.js",
         path: path.resolve(__dirname, "dist") // eslint-disable-line
     },
     devtool: "inline-source-map",
@@ -64,13 +64,14 @@ module.exports = {
         extensions: [".js", ".jsx"],
     },
     plugins: [
+        new webpack.EnvironmentPlugin(["NODE_ENV"]),
         new CleanWebpackPlugin(["dist"]),
         new webpack.optimize.UglifyJsPlugin(),
         new HtmlWebpackPlugin({ template: "src/index.html" }),
         new webpack.optimize.CommonsChunkPlugin({
             name: "common", // Specify the common bundle's name.
         }),
-        new ExtractTextPlugin("styles.css"),
+        new ExtractTextPlugin("styles.[chunkhash].css"),
     ],
     externals: {
         "react": "React",
