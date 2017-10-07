@@ -5,7 +5,7 @@ import Card from "react-toolbox/lib/card";
 import Input from "react-toolbox/lib/input";
 import "./css/layout.scss";
 
-const NRIC_URL = "https://nric.emmanuelgoh.me/api/autocomplete";
+const NRIC_URL = "https://nric.emman.me/api/autocomplete";
 
 class Nric extends React.Component {
     constructor(props) {
