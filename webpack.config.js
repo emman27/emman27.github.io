@@ -11,7 +11,7 @@ module.exports = {
     },
     output: {
         filename: "[name].bundle.[chunkhash].min.js",
-        path: path.resolve(__dirname, "dist") // eslint-disable-line
+        path: path.resolve(__dirname) // eslint-disable-line
     },
     devtool: "inline-source-map",
     devServer: {
