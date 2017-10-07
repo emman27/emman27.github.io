@@ -74,8 +74,6 @@ module.exports = {
         new ExtractTextPlugin("styles.[chunkhash].css"),
     ],
     externals: {
-        "react": "React",
-        "react-dom": "ReactDOM",
         fs: "{}",
         tls: "{}",
         net: "{}",
