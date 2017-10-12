@@ -65,7 +65,7 @@ module.exports = {
     },
     plugins: [
         new webpack.EnvironmentPlugin(["NODE_ENV"]),
-        new CleanWebpackPlugin(["dist"]),
+        new CleanWebpackPlugin(["."]),
         new webpack.optimize.UglifyJsPlugin(),
         new HtmlWebpackPlugin({ template: "src/index.html" }),
         new webpack.optimize.CommonsChunkPlugin({
